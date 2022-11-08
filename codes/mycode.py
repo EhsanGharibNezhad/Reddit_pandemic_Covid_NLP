@@ -12,7 +12,9 @@ from nltk.corpus import stopwords
 
 
 
-
+# ---------------------------------------------------------
+# Class: Text Processing / Normalizing 
+# ---------------------------------------------------------
 class text_processing():
     """
     This class includes the following functions to process the text files:
@@ -86,3 +88,70 @@ class text_processing():
                        text, 
                        func = make_token_fun):
         self.stemming_text = list(map(func, text))        
+        
+        
+        
+        
+        
+# ---------------------------------------------------------
+# Function: Model evaluation  
+# ---------------------------------------------------------        
+def model_Evaluate_values(model, x_train, x_test, y_train, y_test, model_name, balanced=True):
+    """
+    """
+    # Print accuracy scores on train and test sets
+    R_train = model.score(x_train, y_train)
+    R_test  = model.score(x_test, y_test)
+    df_accuracy = pd.DataFrame( np.round( [R_train, R_test], 2 ),  columns=['score'])
+    
+    df_accuracy['metric'] = ['R_train' , 'R_test']
+    df_accuracy['model'] = model_name
+    if balanced == True:
+        df_accuracy['balanced'] = 'yes'
+    if balanced == False:
+        df_accuracy['balanced'] = 'no'
+        
+    # Predict values for Test dataset
+    y_pred = model.predict(x_test)
+    scores = precision_recall_fscore_support(y_test, model.predict(x_test))
+    df_precision_recall = pd.DataFrame( np.round(scores, 2) , columns=['is_pandemicPreps', 'is_covid19positive'] )
+    df_precision_recall['metric'] = ['precision' , 'recall' , 'fscore' , 'support']
+    df_precision_recall['model'] = model_name
+    if balanced == True:
+        df_precision_recall['balanced'] = 'yes'
+    if balanced == False:
+        df_precision_recall['balanced'] = 'no'
+
+    
+    cf_matrix = confusion_matrix(y_test, y_pred)
+    categories = ['Negative','Positive']
+    group_names = ['True Neg','False Pos', 'False Neg','True Pos']
+    group_percentages = [np.round(value, 2) for value in cf_matrix.flatten() / np.sum(cf_matrix)]
+    df_cf_matrix = pd.DataFrame( group_percentages ,  columns=['score'] )
+    df_cf_matrix['metric'] = group_names
+    df_cf_matrix['model'] = model_name
+    if balanced == True:
+        df_cf_matrix['balanced'] = 'yes'
+    if balanced == False:
+        df_cf_matrix['balanced'] = 'no'
+        
+    # save_______________________________
+    # if file is not there
+#     pd.DataFrame(df_accuracy).to_csv('../datasets/models_metrics_report_accuracy.csv')
+#     pd.DataFrame(df_cf_matrix).to_csv('../datasets/models_metrics_report_confusionMatrix.csv')
+#     pd.DataFrame(df_precision_recall).to_csv('../datasets/models_metrics_report_precision_recall.csv')
+    # accuracy - 1
+    df1 = pd.read_csv('../datasets/models_metrics_report_accuracy.csv', index_col=0)
+    df2 = df_accuracy
+    pd.concat([df1,df2],ignore_index=True).to_csv('../datasets/models_metrics_report_accuracy.csv')
+    # accuracy - 0
+    df1 = pd.read_csv('../datasets/models_metrics_report_precision_recall.csv', index_col=0)
+    df2 = df_precision_recall
+    pd.concat([df1,df2],ignore_index=True).to_csv('../datasets/models_metrics_report_precision_recall.csv')
+    # accuracy - 2
+    df1 = pd.read_csv('../datasets/models_metrics_report_confusionMatrix.csv', index_col=0)
+    df2 = df_cf_matrix
+    pd.concat([df1,df2],ignore_index=True).to_csv('../datasets/models_metrics_report_confusionMatrix.csv')
+    
+    #     print(classification_report(y_test, y_pred))
+    return df_accuracy, df_precision_recall, df_cf_matrix        
