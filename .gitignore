@@ -18,7 +18,7 @@ image/
 */*.yes_tuned
 */*.yes
 
-datasets/*
+##datasets/*
 *.h5
 *.json
 
