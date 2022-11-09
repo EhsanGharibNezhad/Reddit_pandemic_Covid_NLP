@@ -91,6 +91,67 @@ class text_processing():
         
         
         
+
+        
+        
+        
+# ---------------------------------------------------------
+# Class: Train models 
+# ---------------------------------------------------------
+# class Train_classification_model():
+#     """
+#     This class includes the following functions to process the text files:
+#     1. read_files_in_path: 
+#                 to read all files
+#     2. read_words: 
+#                 to extract a list of words from each text file
+#     3. make_corpus: 
+#                 to convert each text document into a single corpus
+#                 Results would be a list of corpus
+#     4. corpus_to_info_blocks:
+#                 Split different sections in the corpus 
+#                 e.g., Admission Date, Sex, Discharge Date, Date of Birth...
+#     """
+#     def __init__(self, X, y):
+#         self.X = X
+#         self.y = y
+        
+
+#     def split_train_test_evaluate (self):
+#         # split x and y training and testing sets
+#         self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(
+#                                             self.X,
+#                                             self.y, 
+#                                             stratify=self.y,
+#                                             test_size= 0.25,
+#                                             random_state=42,
+#                                             shuffle=True )        
+
+
+#     def Count_Vectorizer(self):
+#         cvec = CountVectorizer()
+#         self.Xcv_train = cvec.fit_transform(self.X_train)
+#         self.Xcv_test  = cvec.transform(self.X_test)
+
+
+        
+#     def Random_Over_Sampler(self):
+#         ros = RandomOverSampler()
+#         self.Xcv_train_balanced , self.y_train_balanced = ros.fit_resample(self.Xcv_train, self.y_train)
+        
+        
+#     def Random_Over_Sampler(self):
+#         ros = RandomOverSampler()
+#         self.Xcv_train_balanced , self.y_train_balanced = ros.fit_resample(self.Xcv_train, self.y_train)
+
+        
+#     def train_model(self):
+#         logreg_l2 = LogisticRegression(penalty='l2', random_state = 42)  
+#         logreg_l2.fit(self.Xcv_train_balanced , self.y_train_balanced)
+        
+        
+        
+        
         
         
 # ---------------------------------------------------------
