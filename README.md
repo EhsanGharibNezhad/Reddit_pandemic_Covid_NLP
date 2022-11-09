@@ -55,34 +55,18 @@ In this project, ~30,000 posts from the subreddit [Covid19Positive](https://www.
 &nbsp; &nbsp; &nbsp; __ [1__data-collectionPrepPandemic.ipynb](notebooks/1__data-collectionPrepPandemic.ipynb)<br />
 
 *Setp 2: Text Processing:*\
-&nbsp; &nbsp; &nbsp; __ [2_1__text_processing_subreddit_covid19positive_v1.ipynb](notebooks/2_1__text_processing_subreddit_covid19positive_v1.ipynb)<br />
-&nbsp; &nbsp; &nbsp; __ [2_2__text_processing_subreddit_PrepPandemic_v2.ipynb](notebooks/2_2__text_processing_subreddit_PrepPandemic_v2.ipynb)<br />
-&nbsp; &nbsp; &nbsp; __ [2_3__Combined_cleaned_post_processed_datasets.ipynb](notebooks/2_3__Combined_cleaned_post_processed_datasets.ipynb)<br />
+&nbsp; &nbsp; &nbsp; __ [2_text_processing_subreddit_Covid19positive.ipynb](notebooks/2_text_processing_subreddit_Covid19positive.ipynb)<br />
+&nbsp; &nbsp; &nbsp; __ [2_text_processing_subreddit_PandemicPrep.ipynb](notebooks/2_text_processing_subreddit_PandemicPrep.ipynb)<br />
+&nbsp; &nbsp; &nbsp; __ [3_Combined_cleaned_post_processed_datasets.ipynb](notebooks/3_Combined_cleaned_post_processed_datasets.ipynb)<br />
 
 *Setp 3: Exploratory Data Analysis:*\
-&nbsp; &nbsp; &nbsp; __ [3__ExploratoryDataAnalysis_EDA.ipynb](notebooks/3__ExploratoryDataAnalysis_EDA.ipynb)<br />
+&nbsp; &nbsp; &nbsp; __ [4__ExploratoryDataAnalysis_EDA.ipynb](notebooks/4__ExploratoryDataAnalysis_EDA.ipynb)<br />
 
 *Setp 4: NLP Models: Classifiers*\
-&nbsp; &nbsp; &nbsp; __ [4-1__model_Logestic_Regression.ipynb](notebooks/4-1__model_Logestic_Regression.ipynb)<br />
-&nbsp; &nbsp; &nbsp; __ [4-2__model_Logestic_Regression-Imbalanced.ipynb](notebooks/4-2__model_Logestic_Regression-Imbalanced.ipynb)<br />
-&nbsp; &nbsp; &nbsp; __ [4-3__model_Decision_Trees.ipynb](notebooks/4-3__model_Decision_Trees.ipynb)<br />
-&nbsp; &nbsp; &nbsp; __ [4-4__model_Bootstrapping_Bagging.ipynb](notebooks/4-4__model_Bootstrapping_Bagging.ipynb)<br />
-&nbsp; &nbsp; &nbsp; __ [4-5__model_Random_Forests.ipynb](notebooks/4-5__model_Random_Forests.ipynb)<br />
-&nbsp; &nbsp; &nbsp; __ [4-6__model_Extremely_Randomized_Trees__ExtraTrees.ipynb](notebooks/4-6__model_Extremely_Randomized_Trees__ExtraTrees.ipynb)<br />
-&nbsp; &nbsp; &nbsp; __ [4-7__model_Adaboost.ipynb](notebooks/4-7__model_Adaboost.ipynb)<br />
-&nbsp; &nbsp; &nbsp; __ [4-8__model_Gradient_Boosting.ipynb](notebooks/4-8__model_Gradient_Boosting.ipynb)<br />
-&nbsp; &nbsp; &nbsp; __ [4-9__model_xgbooster.ipynb](notebooks/4-9__model_xgbooster.ipynb)<br />
-&nbsp; &nbsp; &nbsp; __ [4-10__model_Naive_Bayes.ipynb](notebooks/4-10__model_Naive_Bayes.ipynb)<br />
-&nbsp; &nbsp; &nbsp; __ [4-11__model_Support_Vector_Machines_SVMs.ipynb](notebooks/4-11__model_Support_Vector_Machines_SVMs.ipynb)<br />
+&nbsp; &nbsp; &nbsp; __ [5__model_Logistic_Regression.ipynb](notebooks/5__model_Logistic_Regression.ipynb)<br />
+&nbsp; &nbsp; &nbsp; __ [5__model_RandomForest.ipynb](notebooks/5__model_RandomForest.ipynb)<br />
+&nbsp; &nbsp; &nbsp; __ [5__model_XGBoost.ipynb](notebooks/5__model_XGBoost.ipynb)<br />
 
-
-*Setp 5: NLP Models: Sentiment Analysis*\
-&nbsp; &nbsp; &nbsp; __ [5-1__sentiment_analysis_VADER.ipynb](notebooks/5-1__sentiment_analysis_VADER.ipynb)<br />
-&nbsp; &nbsp; &nbsp; __ [5-2__sentiment_analysis_Spacy.ipynb](notebooks/5-2__sentiment_analysis_Spacy.ipynb)<br />
-&nbsp; &nbsp; &nbsp; __ [5-3__sentiment_analysis_textblob_NaiveBayesClassifier.ipynb](notebooks/5-3__sentiment_analysis_textblob_NaiveBayesClassifier.ipynb)<br />
-
-*Setp 6: NLP Classifiers: Compare Modeling Metrics*\
-&nbsp; &nbsp; &nbsp; __ [6__compare_all_modeling_results.ipynb](notebooks/6__compare_all_modeling_results.ipynb)<br />
 
 
 ## datasets/<br />
