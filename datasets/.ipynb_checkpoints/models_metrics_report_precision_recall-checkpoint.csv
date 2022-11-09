@@ -1,0 +1,9 @@
+,is_pandemicPreps,is_covid19positive,metric,model,balanced
+0,0.7,0.99,precision,Logestic  Regression / L2,no
+1,0.85,0.97,recall,Logestic  Regression / L2,no
+2,0.77,0.98,fscore,Logestic  Regression / L2,no
+3,585.0,7693.0,support,Logestic  Regression / L2,no
+4,0.7,0.99,precision,Logestic  Regression / L2,no
+5,0.85,0.97,recall,Logestic  Regression / L2,no
+6,0.77,0.98,fscore,Logestic  Regression / L2,no
+7,585.0,7693.0,support,Logestic  Regression / L2,no

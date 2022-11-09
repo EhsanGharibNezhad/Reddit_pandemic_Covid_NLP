@@ -1,0 +1,9 @@
+,score,metric,model,balanced
+0,0.06,True Neg,Logestic  Regression / L2,no
+1,0.01,False Pos,Logestic  Regression / L2,no
+2,0.03,False Neg,Logestic  Regression / L2,no
+3,0.9,True Pos,Logestic  Regression / L2,no
+4,0.06,True Neg,Logestic  Regression / L2,no
+5,0.01,False Pos,Logestic  Regression / L2,no
+6,0.03,False Neg,Logestic  Regression / L2,no
+7,0.9,True Pos,Logestic  Regression / L2,no
