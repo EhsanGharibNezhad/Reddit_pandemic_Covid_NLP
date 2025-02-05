@@ -1,90 +1,75 @@
-# <b> Classification Modeling and Sentiment Analysis of Pandemic Reddit Posts: Natural Language Processing </b> 
+# **Classification Modeling and Sentiment Analysis of Pandemic Reddit Posts: Natural Language Processing**
   
-###  Investigator: Ehsan Gharib-Nezhad
+## Investigator: Ehsan Gharib-Nezhad
 
-<p>
-  <a href="https://www.linkedin.com/in/ehsan-gharib-nezhad/" rel="nofollow noreferrer">
-    <img src="https://i.stack.imgur.com/gVE0j.png" alt="linkedin"> LinkedIn
-  </a> &nbsp; 
-  <a href="https://github.com/EhsanGharibNezhad/" rel="nofollow noreferrer">
-    <img src="https://i.stack.imgur.com/tskMh.png" alt="github"> Github
-  </a>
-</p>
----
-
-<br></br>
-# <a id = 'ProblemStatement'>Problem Statement</b></a>
-
-With no doubt, the pandemic is one of the most unforgettable and unwelcomed events in our life and history.
-Natural Language Processing (NLP) serves as a bridge between humans and computers. NLP provides strong statistical tools to convert the written or verbal language into the machine version to perform several studies including differentiating/classify posts, sentiment analysis, and grammar correction. 
-In this project, ~30,000 posts from the subreddit [Covid19Positive](https://www.reddit.com/r/COVID19positive/) and ~2,300 posts from the subreddit [PandemicPreps](https://www.reddit.com/r/PandemicPreps/) are scraped and their text is processed. Then, more than ten different NLP models such as Logistic regression and Random Forest are performed to classify their posts. In addition, *TextBlob* and *Multinomial Naive Bayes* methods are utilized to analyze sentiments.   
-
+[![LinkedIn](https://i.stack.imgur.com/gVE0j.png)](https://www.linkedin.com/in/ehsan-gharib-nezhad/) &nbsp; [![GitHub](https://i.stack.imgur.com/tskMh.png)](https://github.com/EhsanGharibNezhad/)
 
 ---
 
-<br></br>
-# <a id = 'Content'> Content </b></a>
+## Problem Statement
 
-- [Problem Statement](#ProblemStatement)
-- [Content](#Content)    
-- [Repo Structure](#RepoStructure)    
+The COVID-19 pandemic is one of the most significant global events in modern history. Natural Language Processing (NLP) acts as a bridge between human communication and computational analysis, offering robust statistical tools to analyze and classify text data. This project processes approximately 30,000 posts from the subreddit [Covid19Positive](https://www.reddit.com/r/COVID19positive/) and ~2,300 posts from [PandemicPreps](https://www.reddit.com/r/PandemicPreps/). Using over ten NLP models, including Logistic Regression and Random Forest, posts are classified based on their content. Additionally, sentiment analysis is conducted using *TextBlob* and *Multinomial Naive Bayes*.
 
-    - [Data Dictionary](#ddict)
-    - [Background](#Background)
-    - [1. Data Scarpping: Application Programming Interface](#api)
-   	- [2. Text Normalization](#Text_Normalization)
-    	- [2.1. Tokenization](#Tokenization)
-    	- [2.2. Lemmatization](#Lemmatization)
-    	- [2.3. Stemming](#Stemming)
-    - [Methodology](#Methodology)    
-    	- [Sentiment Analysis](#Sentiment)	
-    - [Exploratory Data Analysis](#eda)    
-    - [Results](#Results)    
-    - [Conclusion](#Conclusion)
-    - [Recommendations](#Recommendations)
-    - [References](#references)
+---
 
+## Table of Contents
 
+- [Problem Statement](#problem-statement)
+- [Repo Structure](#repo-structure)
+- [Data Dictionary](#data-dictionary)
+- [Background](#background)
+- [1. Data Scraping: API](#data-scraping-api)
+- [2. Text Normalization](#text-normalization)
+  - [2.1. Tokenization](#tokenization)
+  - [2.2. Lemmatization](#lemmatization)
+  - [2.3. Stemming](#stemming)
+- [Methodology](#methodology)
+  - [Sentiment Analysis](#sentiment-analysis)
+- [Exploratory Data Analysis](#exploratory-data-analysis)
+- [Results](#results)
+- [Conclusion](#conclusion)
+- [Recommendations](#recommendations)
+- [References](#references)
 
 ---
 # <a id = 'RepoStructure'> Repo Structure </b></a>
 ## notebooks/ <br />
 
 *Setp 1: Reddit Data Scraping:*\
-&nbsp; &nbsp; &nbsp; __ [1__data-collection-Covid19Positive_subreddit.ipynb](notebooks/1__data-collection-Covid19Positive_subreddit.ipynb)<br />
-&nbsp; &nbsp; &nbsp; __ [1__data-collectionPrepPandemic.ipynb](notebooks/1__data-collectionPrepPandemic.ipynb)<br />
+- [1__data-collection-Covid19Positive_subreddit.ipynb](notebooks/1__data-collection-Covid19Positive_subreddit.ipynb)<br />
+-  [1__data-collectionPrepPandemic.ipynb](notebooks/1__data-collectionPrepPandemic.ipynb)<br />
 
 *Setp 2: Text Processing:*\
-&nbsp; &nbsp; &nbsp; __ [2_text_processing_subreddit_Covid19positive.ipynb](notebooks/2_text_processing_subreddit_Covid19positive.ipynb)<br />
-&nbsp; &nbsp; &nbsp; __ [2_text_processing_subreddit_PandemicPrep.ipynb](notebooks/2_text_processing_subreddit_PandemicPrep.ipynb)<br />
-&nbsp; &nbsp; &nbsp; __ [3_Combined_cleaned_post_processed_datasets.ipynb](notebooks/3_Combined_cleaned_post_processed_datasets.ipynb)<br />
+- [2_text_processing_subreddit_Covid19positive.ipynb](notebooks/2_text_processing_subreddit_Covid19positive.ipynb)<br />
+- [2_text_processing_subreddit_PandemicPrep.ipynb](notebooks/2_text_processing_subreddit_PandemicPrep.ipynb)<br />
+- [3_Combined_cleaned_post_processed_datasets.ipynb](notebooks/3_Combined_cleaned_post_processed_datasets.ipynb)<br />
 
 *Setp 3: Exploratory Data Analysis:*\
-&nbsp; &nbsp; &nbsp; __ [4__ExploratoryDataAnalysis_EDA.ipynb](notebooks/4__ExploratoryDataAnalysis_EDA.ipynb)<br />
+- [4__ExploratoryDataAnalysis_EDA.ipynb](notebooks/4__ExploratoryDataAnalysis_EDA.ipynb)<br />
 
 *Setp 4: NLP Models: Classifiers*\
-&nbsp; &nbsp; &nbsp; __ [5__model_Logistic_Regression.ipynb](notebooks/5__model_Logistic_Regression.ipynb)<br />
-&nbsp; &nbsp; &nbsp; __ [5__model_RandomForest.ipynb](notebooks/5__model_RandomForest.ipynb)<br />
-&nbsp; &nbsp; &nbsp; __ [5__model_XGBoost.ipynb](notebooks/5__model_XGBoost.ipynb)<br />
+- [5__model_Logistic_Regression.ipynb](notebooks/5__model_Logistic_Regression.ipynb)<br />
+- [5__model_RandomForest.ipynb](notebooks/5__model_RandomForest.ipynb)<br />
+- [5__model_XGBoost.ipynb](notebooks/5__model_XGBoost.ipynb)<br />
 
 
 
 ## datasets/<br />
 *Unprocessed data collected from sub Reddits:*\
-&nbsp; &nbsp; &nbsp; __ [preprocessed_covid19positive_reddit_LAST.csv](datasets/preprocessed_covid19positive_reddit_LAST.csv)<br />
-&nbsp; &nbsp; &nbsp; __ [preprocessed_df_PandemicPreps_reddit_LAST.csv](datasets/preprocessed_df_PandemicPreps_reddit_LAST.csv)<br />
+- [preprocessed_covid19positive_reddit_LAST.csv](datasets/preprocessed_covid19positive_reddit_LAST.csv)<br />
+- [preprocessed_df_PandemicPreps_reddit_LAST.csv](datasets/preprocessed_df_PandemicPreps_reddit_LAST.csv)<br />
 
 *Text processed dataset ready for modeling phase:*\
-&nbsp; &nbsp; &nbsp; __ [text_processed_PandemicPreps_Mar2020_Mar2021.csv](datasets/text_processed_PandemicPreps_Mar2020_Mar2021.csv)<br />
-&nbsp; &nbsp; &nbsp; __ [text_processed_covid19positive_Mar2020_Mar2021.csv](datasets/text_processed_covid19positive_Mar2020_Mar2021.csv)<br />
-&nbsp; &nbsp; &nbsp; __ [text_processed_all_posts_combined_imbalanced.csv](datasets/text_processed_all_posts_combined_imbalanced.csv)<br />
-&nbsp; &nbsp; &nbsp; __ [text_processed_all_posts_combined.csv](datasets/text_processed_all_posts_combined.csv)<br />
+- [text_processed_PandemicPreps_Mar2020_Mar2021.csv](datasets/text_processed_PandemicPreps_Mar2020_Mar2021.csv)<br />
+- [text_processed_covid19positive_Mar2020_Mar2021.csv](datasets/text_processed_covid19positive_Mar2020_Mar2021.csv)<br />
+- [text_processed_all_posts_combined_imbalanced.csv](datasets/text_processed_all_posts_combined_imbalanced.csv)<br />
+- [text_processed_all_posts_combined.csv](datasets/text_processed_all_posts_combined.csv)<br />
 
 
 *Modeling results: Accuracy, Precision, Recall, Confusion Matrix:*\
-&nbsp; &nbsp; &nbsp; __ [models_metrics_report_confusionMatrix.csv](datasets/models_metrics_report_confusionMatrix.csv)<br />
-&nbsp; &nbsp; &nbsp; __ [models_metrics_report_precision_recall.csv](datasets/models_metrics_report_precision_recall.csv)<br />
-&nbsp; &nbsp; &nbsp; __ [models_metrics_report_accuracy.csv](datasets/models_metrics_report_accuracy.csv)<br />
+- [models_metrics_report_confusionMatrix.csv](datasets/models_metrics_report_confusionMatrix.csv)<br />
+- [models_metrics_report_precision_recall.csv](datasets/models_metrics_report_precision_recall.csv)<br />
+- [models_metrics_report_accuracy.csv](datasets/models_metrics_report_accuracy.csv)<br />
 
 
 [presentation.pdf](presentation.pdf)<br />
