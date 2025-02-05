@@ -280,7 +280,7 @@ The following library is employed to load *VADER*:
 Posts in Covid12Positive have more words as the following figure shows.
 
 <br></br>
-<img src="./plots/eda.png" alt="drawing" width="800"/>
+<img src="./plots/EDA_NLP.jpg" alt="drawing" width="1200"/>
 <br></br>
     
 # <a id = 'Results'>6. Results</b>
