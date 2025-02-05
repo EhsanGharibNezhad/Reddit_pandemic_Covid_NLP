@@ -35,38 +35,38 @@ The COVID-19 pandemic is one of the most significant global events in modern his
 # <a id = 'RepoStructure'> Repo Structure </b></a>
 ## notebooks/ <br />
 
-#### Setp 1: Reddit Data Scraping:*\
+#### Setp 1: Reddit Data Scraping:
 - [1__data-collection-Covid19Positive_subreddit.ipynb](notebooks/1__data-collection-Covid19Positive_subreddit.ipynb)<br />
 - [1__data-collectionPrepPandemic.ipynb](notebooks/1__data-collectionPrepPandemic.ipynb)<br />
 
-#### Setp 2: Text Processing:*\
+#### Setp 2: Text Processing:
 - [2_text_processing_subreddit_Covid19positive.ipynb](notebooks/2_text_processing_subreddit_Covid19positive.ipynb)<br />
 - [2_text_processing_subreddit_PandemicPrep.ipynb](notebooks/2_text_processing_subreddit_PandemicPrep.ipynb)<br />
 - [3_Combined_cleaned_post_processed_datasets.ipynb](notebooks/3_Combined_cleaned_post_processed_datasets.ipynb)<br />
 
-#### Setp 3: Exploratory Data Analysis:*\
+#### Setp 3: Exploratory Data Analysis:
 - [4__ExploratoryDataAnalysis_EDA.ipynb](notebooks/4__ExploratoryDataAnalysis_EDA.ipynb)<br />
 
-#### Setp 4: NLP Models: Classifiers*\
+#### Setp 4: NLP Models: Classifiers
 - [5__model_Logistic_Regression.ipynb](notebooks/5__model_Logistic_Regression.ipynb)<br />
 - [5__model_RandomForest.ipynb](notebooks/5__model_RandomForest.ipynb)<br />
 - [5__model_XGBoost.ipynb](notebooks/5__model_XGBoost.ipynb)<br />
 
 
 
-## datasets/<br />
-*Unprocessed data collected from sub Reddits:*\
+## datasets
+*Unprocessed data collected from sub Reddits:
 - [preprocessed_covid19positive_reddit_LAST.csv](datasets/preprocessed_covid19positive_reddit_LAST.csv)<br />
 - [preprocessed_df_PandemicPreps_reddit_LAST.csv](datasets/preprocessed_df_PandemicPreps_reddit_LAST.csv)<br />
 
-#### Text processed dataset ready for modeling phase:*\
+#### Text processed dataset ready for modeling phase:
 - [text_processed_PandemicPreps_Mar2020_Mar2021.csv](datasets/text_processed_PandemicPreps_Mar2020_Mar2021.csv)<br />
 - [text_processed_covid19positive_Mar2020_Mar2021.csv](datasets/text_processed_covid19positive_Mar2020_Mar2021.csv)<br />
 - [text_processed_all_posts_combined_imbalanced.csv](datasets/text_processed_all_posts_combined_imbalanced.csv)<br />
 - [text_processed_all_posts_combined.csv](datasets/text_processed_all_posts_combined.csv)<br />
 
 
-#### Modeling results: Accuracy, Precision, Recall, Confusion Matrix:*\
+#### Modeling results: Accuracy, Precision, Recall, Confusion Matrix:
 - [models_metrics_report_confusionMatrix.csv](datasets/models_metrics_report_confusionMatrix.csv)<br />
 - [models_metrics_report_precision_recall.csv](datasets/models_metrics_report_precision_recall.csv)<br />
 - [models_metrics_report_accuracy.csv](datasets/models_metrics_report_accuracy.csv)<br />
